@@ -1,37 +1,4 @@
 
-package mock;
-import static org.mockito.Matchers.anyInt;
-import static org.mockito.Matchers.anyString;
-import static org.mockito.Mockito.CALLS_REAL_METHODS;
-import static org.mockito.Mockito.atLeast;
-import static org.mockito.Mockito.atLeastOnce;
-import static org.mockito.Mockito.atMost;
-import static org.mockito.Mockito.doThrow;
-import static org.mockito.Mockito.inOrder;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.never;
-import static org.mockito.Mockito.reset;
-import static org.mockito.Mockito.spy;
-import static org.mockito.Mockito.timeout;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.verifyZeroInteractions;
-import static org.mockito.Mockito.when;
-import static org.mockito.Mockito.withSettings;
-
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-
-import org.junit.Test;
-import org.junit.rules.Timeout;
-import org.mockito.ArgumentCaptor;
-import org.mockito.InOrder;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.invocation.InvocationOnMock;
-import org.mockito.stubbing.Answer;
-
 ```java
 
 public class SimpleTest2 {
@@ -107,7 +74,6 @@ public class SimpleTest2 {
     verify(mockedList).add("one");
     verify(mockedList).clear();
   }
-```
   @Test
   public void t08模拟方法调用() {
     // TODO 模拟方法调用（Stubbing）
@@ -344,17 +310,6 @@ public class SimpleTest2 {
     Mockito.mockingDetails(someObject).isMock();
     Mockito.mockingDetails(someObject).isSpy();
   }
-}
-
-class Foo {
-
-}
-
-class Pies<T> {
-  public String someMethod(T o) {
-    return null;
-  }
-
 }
 
 ```
